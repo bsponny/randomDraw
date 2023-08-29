@@ -28,27 +28,19 @@ def main():
     ypos = 0
 
     for i in range(1000):
-        t.penup()
         point = random.randint(1, 3)
         
         if point == 1:
             xpos = xpos + (x1 - xpos)/2
             ypos = ypos + (y1 - ypos)/2
-            t.goto(xpos, ypos)
-            t.pendown()
-            t.dot(5)
         elif point == 2:
             xpos = xpos + (x2 - xpos)/2
             ypos = ypos + (y2 - ypos)/2
-            t.goto(xpos, ypos)
-            t.pendown()
-            t.dot(5)
         elif point == 3:
             xpos = xpos + (x3 - xpos)/2
             ypos = ypos + (y3 - ypos)/2
-            t.goto(xpos, ypos)
-            t.pendown()
-            t.dot(5)
+
+        triDot(xpos, ypos)
 
 main()
 turtle.done()
